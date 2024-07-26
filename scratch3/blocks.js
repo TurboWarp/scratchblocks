@@ -140,7 +140,7 @@ export class LineView {
   draw(_iconStyle, parent) {
     const category = parent.info.category
     return SVG.el("line", {
-      class: `sb3-${category}-line`,
+      class: `sb3-${category}`,
       "stroke-linecap": "round",
       x1: 0,
       y1: 0,
@@ -536,15 +536,14 @@ class BlockView {
     const padRight = children.length ? this.horizontalPadding(lastChild) : 0
     innerWidth += padLeft + padRight
 
-    // Commands have a minimum width
-    // The hat min-width is arbitrary (not sure of Scratch 3 value)
-    // Outline min-width is deliberately higher (because Scratch 3 looks silly)
+    // Commands have a minimum width.
+    // Outline min-width is deliberately higher (because Scratch 3 looks silly).
     const originalInnerWidth = innerWidth
     innerWidth = Math.max(
       this.hasScript
         ? 160
         : this.isHat
-        ? 108
+        ? 100 // Correct for Scratch 3.0.
         : this.isCommand || this.isOutline
         ? 64
         : this.isReporter
