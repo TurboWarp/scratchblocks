@@ -2,7 +2,7 @@
 
 const common = `
 .sb3-label {
-  font: 500 12pt Helvetica Neue, Helvetica, sans-serif;
+  font: 500 12pt "Helvetica Neue", Helvetica, Arial, sans-serif;
   word-spacing: +1pt;
 }
 
@@ -39,7 +39,7 @@ const commonOverride = `
 }
 /* specificity */
 .sb3-comment-label, .sb3-label.sb3-comment-label {
-  font: 400 12pt Helvetica Neue, Helvetica, sans-serif;
+  font: 400 12pt "Helvetica Neue", Helvetica, Arial, sans-serif;
   fill: #000;
   word-spacing: 0;
 }`
